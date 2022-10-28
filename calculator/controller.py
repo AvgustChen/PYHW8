@@ -16,7 +16,6 @@ async def init_list(update, context):
     global opSelect
     await update.message.reply_text(f'Введите ваше выражение: ')
     list = str(update.message.text)
-    print(list)
     await input_list(update, list)
 
 # async def result_list(list):
@@ -47,7 +46,7 @@ async def totalOperation(update, list):
         .replace('*', ' * ')\
         .replace('/', ' / ')
     list = list.split()
-    print(list)
+    
 
     while len(list)>1:
         if '*' in list or '/' in list:
